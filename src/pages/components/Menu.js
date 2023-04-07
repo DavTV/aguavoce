@@ -3,8 +3,6 @@ import Loading from "./Loading";
 
 
 const Menu = ({categories, handleLink}) => {
-
-
     return ( 
         <div className="text-center my-4 ">
             {
