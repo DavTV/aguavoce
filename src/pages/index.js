@@ -9,7 +9,7 @@ import styles from "./index.module.css";
 const Home = () => {
     
     const [dataProducts, setdataProducts] = useState([]);
-    const [categories, setCategories] = useState([]);
+    // const [categories, setCategories] = useState([]);
 
     const handleLink=(category)=>{
         setdataProducts([])
@@ -17,15 +17,15 @@ const Home = () => {
     }
     useEffect(() => {
         useProucts().fetchProducts().then((data)=>{setdataProducts(data)})
-        useProucts('https://fakestoreapi.com/products/categories').fetchProducts().then((data)=>{setCategories(data)})
+        // useProucts('https://fakestoreapi.com/products/categories').fetchProducts().then((data)=>{setCategories(data)})
 
     }, []);
-console.log(dataProducts)
+// console.log(dataProducts)
   return ( 
     <div className="container p-3">
         <CarShopping/>
         <hr/>
-        <Menu  categories={categories} handleLink={handleLink}  />
+        <Menu   handleLink={handleLink}  />
         <h1 className="">Home</h1>
         <p>Probando Redux Toolkit</p>
         <div className="row">

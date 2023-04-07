@@ -7,7 +7,7 @@ const useProucts = (url="https://fakestoreapi.com/products") => {
                 throw new Error({ status: response.status, statusText: response.statusText })
             }
             const dataResponse = await response.json();
-            // setLoading(false)
+          
             return dataResponse
         } catch (error) {
             console.log(error)
