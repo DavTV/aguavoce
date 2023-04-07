@@ -3,7 +3,7 @@ import CardProduct from "./components/CardProduct";
 import CarShopping from "./components/CarShopping";
 import Loading from "./components/Loading";
 import Menu from "./components/Menu";
-import useProucts from "./hooks/useProducts";
+import useProucts from "../hooks/useProducts";
 import styles from "./index.module.css";
 
 const Home = () => {

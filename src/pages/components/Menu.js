@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useProucts from "../hooks/useProducts";
+import useProucts from "../../hooks/useProducts";
 import Loading from "./Loading";
 
 const Menu = ({handleLink}) => {
