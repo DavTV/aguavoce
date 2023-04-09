@@ -14,10 +14,6 @@ const useProucts = (url="https://fakestoreapi.com/products") => {
         }
     }
 
-    // useEffect(() => {
-    //     fetchProducts();
-    // }, [url]);
-
     return {
         fetchProducts
     }

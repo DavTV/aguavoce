@@ -4,7 +4,7 @@ import CarShopping from "./components/CarShopping";
 import Loading from "./components/Loading";
 import Menu from "./components/Menu";
 import useProucts from "../hooks/useProducts";
-import styles from "./index.module.css";
+
 
 const Home = () => {
     
@@ -17,12 +17,11 @@ const Home = () => {
     }
     useEffect(() => {
         useProucts().fetchProducts().then((data)=>{setdataProducts(data)})
-        // useProucts('https://fakestoreapi.com/products/categories').fetchProducts().then((data)=>{setCategories(data)})
 
     }, []);
 // console.log(dataProducts)
   return ( 
-    <div className="container p-3">
+    <div className="container p-3 overflow-hidden">
         <CarShopping/>
         <hr/>
         <Menu   handleLink={handleLink}  />

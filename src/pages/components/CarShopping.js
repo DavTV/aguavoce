@@ -1,11 +1,9 @@
-import styles from "./carShopping.module.css";
 import {useSelector} from "react-redux";
-import CardProduct from "./CardProduct";
 import Row from "./Row";
 import { useState } from "react";
 // useState
 const CarShopping = () => {
-    const {count,data}= useSelector(state => state.car)
+    const {count,data} = useSelector(state => state.car)
     const [openbtn, setOpenbtn] = useState(false);
 
     return ( 
@@ -16,17 +14,31 @@ const CarShopping = () => {
                 <div className="table-responsive  p-2">
                     {data.length >0 ?
                     
-                    <table className="table ">
-
-                    {  data.map(({id,title,price,description,category,image})=>{
+                    <table className="table">
+                        <tbody>
+                    {  data.map(({id,title,price,description,count,category,image})=>{
                         return (
                             // <CardProduct key={id} id={id} title={title} description={description} category={category} image={image} price={price} />
-                            <Row key={id} id={id} title={title} description={description} category={category} image={image} price={price}/>
+                            <Row key={id} id={id} title={title} count={count} description={description} category={category} image={image} price={price}/>
                             )
                         })
                     }
+                    </tbody>
                     </table>
                      : <p className="p-2 text-center">Aún no hay productos agregados</p>}
+
+                     {data.length >0 &&
+                        <div className="d-flex justify-content-between px-3 py-2">
+                            
+                                <button className="btn btn-outline-primary" onClick={()=>{alert("Función en desarrollo")}}  >Realizar Compra</button>
+                            
+                            
+                                <p className="fw-bold">Total : $ {1218.22}</p>
+
+                            
+                        </div>
+                     
+                     }
             </div>   
         </div>
         </div>

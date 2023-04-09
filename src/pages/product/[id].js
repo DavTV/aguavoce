@@ -1,5 +1,6 @@
 import {useDispatch} from "react-redux";
 import {addProduct} from '../../reducers/car/carSlice';
+// import { addProduct } from "../../reducers/car/carSlice";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -8,6 +9,7 @@ import { useEffect, useState } from "react";
 import Loading from "../components/Loading";
 
 const Product = () => {
+    // console.log(addProduct)
     const [product,setProduct] = useState({})
     const router = useRouter();
     const { id } = router.query||"";
@@ -17,7 +19,7 @@ const Product = () => {
   
     const {title,price,description,category,image} = product;
     const dispatch = useDispatch();
-    console.log(product)
+    console.log(addProduct)
     return (
          
         product.title  ? 
@@ -51,7 +53,7 @@ const Product = () => {
                 <Link  href="/" className="btn btn-outline-primary my-3"   onClick={()=>{
                     dispatch(
                         addProduct(
-                            {id,title,price,category,description,image}
+                            {id,title,price,category,description,image, count :3}
                             )
                             )}} >Agregar a carrito</Link>
 
