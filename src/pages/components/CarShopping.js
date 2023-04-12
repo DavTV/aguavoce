@@ -1,7 +1,6 @@
 import {useSelector} from "react-redux";
 import Row from "./Row";
 import { useState } from "react";
-// useState
 const CarShopping = () => {
     const {count,data} = useSelector(state => state.car)
     const [openbtn, setOpenbtn] = useState(false);
@@ -15,10 +14,20 @@ const CarShopping = () => {
                     {data.length >0 ?
                     
                     <table className="table">
+                            <thead>
+                                <tr>
+                                    <th>Producto</th>
+                                    <th>Nombre</th>
+                                    <th>Precio</th>
+                                    <th>Cantidad</th>
+                                    <th>SubTotal</th>
+                                    <th>Opciones</th>
+                                </tr>
+
+                            </thead>
                         <tbody>
                     {  data.map(({id,title,price,description,count,category,image})=>{
                         return (
-                            // <CardProduct key={id} id={id} title={title} description={description} category={category} image={image} price={price} />
                             <Row key={id} id={id} title={title} count={count} description={description} category={category} image={image} price={price}/>
                             )
                         })
@@ -34,7 +43,7 @@ const CarShopping = () => {
                             
                             
                                 <p className="fw-bold">Total : $ {1218.22}</p>
-
+                            {/* Gestión de asistencia por reconocimiento facial en colegio ..... */}
                             
                         </div>
                      

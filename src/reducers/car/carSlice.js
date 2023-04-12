@@ -18,6 +18,10 @@ export const carSlice = createSlice({
             // console.log(state)
             state.count=state.count-1;
 
+        },
+        editProduct:(state,action)=>{
+
+            state.data.map((product)=>{return product.id == action.payload.id ? product.count = action.payload.count : product} ) 
         }
     }
 })
