@@ -12,9 +12,9 @@ const Row = ({id,title,price,description,image, count}) => {
             <td>{count}</td>
             <td> <span className="text-primary">ST: </span>${price*count}</td>
             <td >
-                <Link className="btn btn-outline-success mb-1 mx-1" href={`/product/${id}`} > Editar
-                    </Link>
-                {/* <button className="btn btn-outline-success mb-1 mx-1" onClick={()=>{alert("Función en desarrollo")}} >Editar</button> */}
+                {/* <Link className="btn btn-outline-success mb-1 mx-1" href={`/product/${id}`} > Editar
+                    </Link> */}
+                <button className="btn btn-outline-success mb-1 mx-1" onClick={()=>{alert("Función en desarrollo")}} >Editar</button>
                 <button className="btn btn-outline-danger mb-1 mx-1" onClick={()=>{
                     dispatch(
                         deleteProduct(id)
