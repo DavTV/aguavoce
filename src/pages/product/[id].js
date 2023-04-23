@@ -61,7 +61,6 @@ const Product = () => {
                                             { id, title, price, category, description, image, count }
                                         )
                                     )
-                                    alert("Producto agregado correctamente.")
                                 }} >Agregar a carrito</Link>
 
                             </div>

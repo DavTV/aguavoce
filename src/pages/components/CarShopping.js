@@ -44,7 +44,7 @@ const CarShopping = () => {
                     <div className="d-md-flex justify-content-between px-3 py-2" >
                             
                             <button className="btn btn-outline-primary" onClick={()=>{alert("Función en desarrollo")}}  >Realizar Compra</button>                        
-                            <p className="fw-bold my-3">Total : $ {total.toFixed(2)}</p>
+                            <p className="fw-bold my-3">Total : S/ {total.toFixed(2)}</p>
                     </div> 
                     }
                  
