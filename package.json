@@ -1,5 +1,5 @@
 {
-  "name": "redux-tolkin-carshopping",
+  "name": "agua-voce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,10 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
+    "axios": "^1.4.0",
+    "body-parser": "^1.20.2",
     "bootswatch": "^5.2.3",
+    "mysql2": "^3.3.1",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",

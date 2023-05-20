@@ -21,7 +21,10 @@ const Row = ({id,title,price,description,image, count}) => {
     const dispatch = useDispatch();
     return ( 
         <tr>
-            <td className="img-table"> <Image src={image||""} alt={description}  width="0" height="0" layout="responsive" /></td>
+            <td className="img-table">
+                 {/* <Image src={image||""} alt={description}  width="0" height="0" layout="responsive" /> */}
+                 <Image src="/products/botella-650ml.jpg" alt={description}  width="0" height="0" layout="responsive" />
+                 </td>
             <td>{title}</td>
             <td>${price}</td>
             <td>
@@ -33,7 +36,7 @@ const Row = ({id,title,price,description,image, count}) => {
 
                 }
             </td>
-            <td> <span className="text-primary">ST: </span>${price*count}</td>
+            <td> <span className="color-fondo">ST: </span>${price*count}</td>
             <td >
                 
                 <button className="btn btn-outline-success mb-1 mx-1" onClick={()=>handleEdit(id,newCount)} >{edit ? "Confirmar": "Editar"}</button>

@@ -7,7 +7,7 @@ const CarShopping = () => {
     // console.log(useSelector(state => state.car))
     return ( 
         <div className="position-relative">
-            <small className="fs-2 cursor-pointer" onClick={()=>setOpenbtn(!openbtn)} >🛒<small></small><sup className="text-primary"> {count}</sup></small>
+            <small className="fs-2 cursor-pointer" onClick={()=>setOpenbtn(!openbtn)} >🛒<small></small><sup className="color-fondo"> {count}</sup></small>
             <div className={ openbtn ? "position-absolute car-shopping  shadow rounded active": "position-absolute car-shopping  shadow rounded "}
              >
                 <div className="table-responsive  p-2">
@@ -43,7 +43,7 @@ const CarShopping = () => {
                     
                     <div className="d-md-flex justify-content-between px-3 py-2" >
                             
-                            <button className="btn btn-outline-primary" onClick={()=>{alert("Función en desarrollo")}}  >Realizar Compra</button>                        
+                            <button className="btn  color-fondo btn-fondo" onClick={()=>{alert("Función en desarrollo")}}  >Realizar Compra</button>                        
                             <p className="fw-bold my-3">Total : S/ {total.toFixed(2)}</p>
                     </div> 
                     }

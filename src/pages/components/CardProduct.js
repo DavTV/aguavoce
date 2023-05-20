@@ -1,26 +1,33 @@
 import Image from "next/image";
-import styles from "./cardProduct.module.css";
-// import {useDispatch} from "react-redux";
-// import {addProduct} from '../../reducers/car/carSlice';
 import Link from "next/link";
 
 const CardProduct = ({id,title,price,description,image}) => {
     return ( 
-        <div className=" p-3 col-6 col-md-4">
-            <div className="card p-3">
+        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+						<div className="form-group mb-3">
+							<div className="card">
+								<div className="card-body text-center">
+								
+                                 {/* <Image src={image||""} alt={description}  width="180" height="250" layout="responsive" /> */}
+                                 <Image src="/products/botella-650ml.jpg" alt={description}  width="180" height="250" layout="responsive" />
 
-            <div className={styles.containerImage}>
-                <Image src={image||""} alt={description}  width="0" height="0" layout="responsive" />
-            </div>
-            <hr/>
-            <p className="fw-bold text-primary text-truncate">{title}</p>
-            <strong>Precio: S/ {price}</strong>
-            <div>
-                    <Link className="btn btn-outline-primary my-3" href={`/product/${id}`} > Ver
+
+								</div>
+								<div className="card-footer text-center">
+									<h6>{title}</h6>
+									<h5>S/ {price}</h5>
+									
+									<div>  
+										{/* <a href="" class="btn btn-danger"><img src="img/heart.png" alt=""/></a>
+										<a href="Controlador?accion=AgregarCarrito&id=${p.getId()}" class="btn btn-outline-info">Detalles</a> */}
+                                        <button className="btn btn-danger me-2"><Image src="/corazon-blanco.png" width={20} height={20} alt="like" /></button>
+                                        <Link className="btn color-fondo btn-fondo my-3" href={`/product/${id}`} > Detalle
                     </Link>
-                    </div>
-            </div>
-        </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
      );
 }
  

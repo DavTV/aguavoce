@@ -1,6 +1,35 @@
+.bg-fondo{
+    background-color: #00529C !important;
+}
+.color-fondo{
+    color: #00529C !important;
+}
+
+.btn-active-header:hover{
+    /* color: #2196F3 !important; */
+    transition: all .3s ease-in-out;
+    transform: scale(1.2);
+    font-weight: bold;
+}
 .btn-active:focus{
-    background-color: #2196F3 !important;
+    background-color:  #00529C !important;
     color: #fff !important;
+}
+.btn-fondo{
+    color: #00529C !important;
+    transition: all .5s ease-in-out;
+}
+.btn-fondo:hover{
+    background-color:#00529C !important;
+    color: #fff !important;
+}
+.shadow-hover{
+    transition: all .5s ease-in-out;
+}
+.shadow-hover:hover{
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
+
 }
 
 .position-absolute{
@@ -28,4 +57,9 @@
 }
 .cursor-pointer{
     cursor: pointer;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
