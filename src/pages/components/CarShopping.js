@@ -1,11 +1,14 @@
 import {useSelector} from "react-redux";
 import Row from "./Row";
 import { useState, useEffect } from "react";
+import FormLogin from "./FormLogin";
+import axios from "axios";
 const CarShopping = () => {
     const {count,data,total} = useSelector(state => state.car)
     const [openbtn, setOpenbtn] = useState(false);
     // console.log(useSelector(state => state.car))
     const [message, setMessage] = useState("");
+    const [number, setNumber] = useState(0);
     const PushProductWhatsapp=()=>{
         let aux= "";
         data.map((item)=>{
@@ -16,13 +19,20 @@ const CarShopping = () => {
         }
 
 
-    const SendWhatsapp=()=>{
+    const SendWhatsapp=async ()=>{
         if(data.length>0){
-            const link = `https://api.whatsapp.com/send?phone=51979895362&text=Hola,%20quisiera%20hacer %20la%20siguiente%20orden%20:%20${message}%20con%20un%20monto%20total%20de%20${total.toFixed(2)}%20 nuevos%20soles.`
+            const link = `https://api.whatsapp.com/send?phone=51985092619&text=Hola,%20quisiera%20hacer %20la%20siguiente%20orden%20:%20${message}%20con%20un%20monto%20total%20de%20${total.toFixed(2)}%20 nuevos%20soles.`
     
             let a = document.createElement('a');
             a.href= link;
-            a.click();
+            // console.log(number)
+            const res = await axios.post("/api/users",{number,data, amount:total.toFixed(2)})
+            console.log(res);
+            if(res.data == 1){
+                a.click();
+            }else{
+                alert("Debe registrarse primero.")
+            }
 
         }else{
             alert("Necesita tener al menos un producto antes de realizar la compra.")
@@ -72,8 +82,9 @@ const CarShopping = () => {
                     
                     <div className="d-md-flex justify-content-between px-3 py-2" >
                             
-                            <button className="btn  color-fondo btn-fondo" onClick={SendWhatsapp}  >Realizar Compra</button>                        
+                            <FormLogin setNumber={setNumber}/>
                             <p className="fw-bold my-3">Total : S/ {total.toFixed(2)}</p>
+                            <button className="btn  color-fondo btn-fondo" onClick={SendWhatsapp}  >Realizar Compra</button>                        
                            
                     </div> 
                     }

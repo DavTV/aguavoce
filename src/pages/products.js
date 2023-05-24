@@ -11,7 +11,7 @@ const Products = () => {
     const [dataInitialProducts, setdataInitialProducts] = useState([]);
     const [dataForm, setDataForm] = useState([]);
     const GetProducts= async ()=>{
-        const res = await axios.post('/api/products');
+        const res = await axios.get('/api/products');
         console.log(res.data);
         setdataInitialProducts(res.data);
     }
