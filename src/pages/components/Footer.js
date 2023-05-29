@@ -32,7 +32,7 @@ const Footer = () => {
                         <h5>REDES SOCIALES</h5>
                         <ul className="d-flex p-0 text-center">
                             <li className="mx-1">
-                                <a><Image src="/redes/facebook.png" width={30} height={30} /></a>
+                                <a href="https://www.facebook.com/Aguavoce/photos?locale=es_LA"><Image src="/redes/facebook.png" width={30} height={30} /></a>
                             </li>
                             <li className="mx-1">
                                 <a><Image src="/redes/instagram.png" width={30} height={30} /></a>

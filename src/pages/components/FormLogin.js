@@ -2,8 +2,7 @@ const FormLogin = ({setNumber}) => {
     
     return ( 
     
-                <input  type="number" className="form-control"  placeholder="Ingrese su número de celular" onBlur={(e)=>{setNumber(e.target.value)}} />
-        
+         <input  type="number" className="form-control max-input"  placeholder="Ingrese su número de celular" onBlur={(e)=>{setNumber(e.target.value)}} />
      );
 }
  

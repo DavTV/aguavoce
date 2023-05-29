@@ -9,7 +9,7 @@ const CardProduct = ({id,title,price,description,image}) => {
 								<div className="card-body text-center">
 								
                                  {/* <Image src={image||""} alt={description}  width="180" height="250" layout="responsive" /> */}
-                                 <Image src="/products/botella-650ml.jpg" alt={description}  width="180" height="250" layout="responsive" />
+                                 <Image src="/products/imagen1.jpg" alt={description}  width="180" height="250" layout="responsive" />
 
 
 								</div>

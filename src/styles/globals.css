@@ -63,3 +63,6 @@ ul{
     padding: 0;
     margin: 0;
 }
+.max-input{
+    max-width: 300px !important;
+}

@@ -3,6 +3,7 @@ import Row from "./Row";
 import { useState, useEffect } from "react";
 import FormLogin from "./FormLogin";
 import axios from "axios";
+import Link from "next/link";
 const CarShopping = () => {
     const {count,data,total} = useSelector(state => state.car)
     const [openbtn, setOpenbtn] = useState(false);
@@ -21,12 +22,12 @@ const CarShopping = () => {
 
     const SendWhatsapp=async ()=>{
         if(data.length>0){
-            const link = `https://api.whatsapp.com/send?phone=51985092619&text=Hola,%20quisiera%20hacer %20la%20siguiente%20orden%20:%20${message}%20con%20un%20monto%20total%20de%20${total.toFixed(2)}%20 nuevos%20soles.`
+            const link = `https://api.whatsapp.com/send?phone=51936584162&text=Hola,%20quisiera%20hacer %20la%20siguiente%20orden%20:%20${message}%20con%20un%20monto%20total%20de%20${total.toFixed(2)}%20 nuevos%20soles.`
     
             let a = document.createElement('a');
             a.href= link;
             // console.log(number)
-            const res = await axios.post("/api/users",{number,data, amount:total.toFixed(2)})
+            const res = await axios.post("/api/users/login",{number,data, amount:total.toFixed(2)})
             console.log(res);
             if(res.data == 1){
                 a.click();
@@ -88,6 +89,9 @@ const CarShopping = () => {
                            
                     </div> 
                     }
+                    <div className="px-3 py-2">
+                        <Link href="/register">Registrate para poder realizar tu pedido</Link>
+                    </div>
                  
             </div>   
         </div>
