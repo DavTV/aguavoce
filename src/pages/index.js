@@ -9,7 +9,7 @@ const Home = () => {
         <div className="rounded-1 p-3 mb-5">
             <h2 className="text-center my-3 color-fondo">¡Bienvenidos!</h2>
             <hr/>
-            <p>Empres adedicada a la elaboración de  envases plásticos para la industria. Cubrimos distintosmercados de avases plásticos desde bebidas carbonatadas, aguas, aceites, agroquímicos, categorizados de la siguiente manera.</p>
+            <p>Empres adedicada a la elaboración de  envases plásticos para la industria. Cubrimos distintosmercados de envases plásticos desde bebidas carbonatadas, aguas, aceites, agroquímicos, categorizados de la siguiente manera.</p>
         </div>
         <div className="row my-4">
             <CardIndex image="/droplet.svg" title="MEJOR CALIDAD" text="Nuestra agua embotellada se distingue de la competencia porque es 100% purificadad."/>
