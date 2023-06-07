@@ -44,7 +44,7 @@ const Product = () => {
 
                             <div style={{ maxHeight: "400px", maxWidth: "300px" }} className="my-4" >
                                 <p className="my-4">{title} - <span className="color-fondo">{category}</span></p>
-                                <Image src="/products/botella-650ml.jpg" alt={description}  width="300" height="350" layout="response" className="d-block mx-auto"/>
+                                <Image src="/products/imagen1.jpg" alt={description}  width="300" height="350" layout="response" className="d-block mx-auto"/>
                                 {/* <Image src={image || ""} alt={description} width="300" height="350" layout="response" className="d-block mx-auto" /> */}
                             </div>
                         </div>
