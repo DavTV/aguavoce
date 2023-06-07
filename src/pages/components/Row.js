@@ -23,7 +23,7 @@ const Row = ({id,title,price,description,image, count}) => {
         <tr>
             <td className="img-table">
                  {/* <Image src={image||""} alt={description}  width="0" height="0" layout="responsive" /> */}
-                 <Image src="/products/botella-650ml.jpg" alt={description}  width="0" height="0" layout="responsive" />
+                 <Image src="/products/imagen1.jpg" alt={description}  width="0" height="0" layout="responsive" />
                  </td>
             <td>{title}</td>
             <td>${price}</td>
