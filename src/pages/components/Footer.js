@@ -24,15 +24,15 @@ const Footer = () => {
                         <h5>CONTACTANOS</h5>
                         <p>De Lunes-Sábado 08 a.m a 6 p.m. y Dom 08 a.m a 12p.m</p>
                         <p><Image src="/contacto/whatsapp.png" width={30} height={30} className="me-2" alt="whatsApp" />936584162</p>
-                        <p><Image src="/contacto/telefono.png" width={30} height={30}  className="me-2" alt="teléfono" />044 649908</p>
-                        <p><Image src="/contacto/casa.png" width={30} height={30} className="me-2" alt="dirección" /> Jr. Torre Tagle 119 - Trujillo</p>
-                        <p><Image src="/contacto/correo.png" width={30} height={30} className="me-2" alt="correo" />sdlcompany@gmail.com</p>
+                        <p><Image src="/contacto/telefono.png" width={30} height={30}  className="me-2" alt="teléfono" />+51 947402090</p>
+                        <p><Image src="/contacto/casa.png" width={30} height={30} className="me-2" alt="dirección" /><link href="https://www.google.com/maps/search/Direcci%C3%B3n+Legal:+Av.+Gran+Separador+MZ+E8+LT28+Parque+Industrial+%E2%80%93+La+Esperanza,+Trujillo/@-8.0594776,-79.1003944,13z/data=!3m1!4b1?entry=ttu"> Dirección Legal: Av. Gran Separador MZ E8 LT28 Parque Industrial – La Esperanza, Trujillo</link></p>
+                        <p><Image src="/contacto/correo.png" width={30} height={30} className="me-2" alt="correo" />ventas@aguavoce.com</p>
                     </div>
                     <div className="col-6 col-md-3 mb-3">
                         <h5>REDES SOCIALES</h5>
                         <ul className="d-flex p-0 text-center">
                             <li className="mx-1">
-                                <a href="https://www.facebook.com/Aguavoce/photos?locale=es_LA"><Image src="/redes/facebook.png" width={30} height={30} /></a>
+                                <a href="https://www.facebook.com/Aguavoce"><Image src="/redes/facebook.png" width={30} height={30} /></a>
                             </li>
                             <li className="mx-1">
                                 <a><Image src="/redes/instagram.png" width={30} height={30} /></a>
